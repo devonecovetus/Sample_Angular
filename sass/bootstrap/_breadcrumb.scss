@@ -1,0 +1,30 @@
+.breadcrumb {
+  padding: $breadcrumb-padding-vertical $breadcrumb-padding-horizontal;
+  list-style: none;
+  background-color: $breadcrumb-bg;
+  @include clearfix;
+  margin-bottom:0px;
+
+  > li {
+    float: left;
+	font-size:13px;
+	font-family:Arial, Helvetica, sans-serif;
+	text-transform:capitalize;
+	
+	a {
+		color:#fff;
+	}
+
+    + li::before {
+	  font-family:fontAwesome;
+	  content: '\f105';	  
+      padding-right: .3rem;
+      padding-left: .3rem;
+      color: $breadcrumb-divider-color;      
+    }
+  }
+
+  > .active {
+    color: $breadcrumb-active-color;
+  }
+}
